@@ -1,0 +1,38 @@
+{
+  "name": "solid",
+  "version": "1.0.0",
+  "description": "SOLID pattern",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "prettier:check": "prettier --check src/*.ts",
+    "prettier:fix": "prettier **/* --write --ignore-unknown",
+    "eslint:fix": "npx eslint . --ext .ts --fix",
+    "start:s": "npx ts-node ./src/S.ts",
+    "start:o": "npx ts-node ./src/O.ts",
+    "start:l": "npx ts-node ./src/L.ts",
+    "start:i": "npx ts-node ./src/I.ts",
+    "start:d": "npx ts-node ./src/D.ts"
+  },
+  "keywords": [
+    "K",
+    "N",
+    "R"
+  ],
+  "author": "Nikita Kruhliakou",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/typescript-estree": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.12.0",
+    "typescript": "^4.5.5",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
